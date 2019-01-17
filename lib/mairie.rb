@@ -17,8 +17,14 @@ def get_townhall_urls
         content = doc.css('tr')
       
         #Pour chaque lien avec une classe .lientxt, je vais récupérer le nom du lien et l'url
-        content.css('.lientxt').length.times do |i|
+       # content.css('.lientxt').length.times do |i|
               
+
+
+              # /!\ LIMITATION A 10 MAIRIES POUR ALLER PLUS VITE
+             10.times do |i|
+
+
               #Je récupère le nom du lien (le nom de la mairie)
               name= content.css('.lientxt')[i].text
 

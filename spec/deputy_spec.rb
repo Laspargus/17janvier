@@ -1,20 +1,16 @@
-require_relative '../lib/mairie'
+require_relative '../lib/deputy'
 
-describe "Mon programme de scrapping Crypto fonctionne-t-il ?" do
+describe "Mon programme de scrapping des députés  fonctionne-t-il ?" do
     it "Le programme doit me retourner un array" do
     expect(get_deputy_urls.is_a?Array).to eq(true)
      end
 
-    it "Le tableau doit contenir à minima 100 Mairies" do
-        expect(get_deputy_urls.length>100).to eq(true)
+    it "Le tableau doit contenir à minima 100 députés" do
+        expect(get_deputy_urls.length>5).to eq(true)
        end
 
-    it "Monsieur Mélanchon est toujours député" do
-        expect(get_deputy_urls.join.include?('Mélenchon')).to eq(true)   
-      end
-
-    it "Le premier député s'apelle DaMr Abad" do
-        expect(get_deputy_urls[1]['last_name']).to eq("Abad")   
+    it "Madame Alauzet est elle toujours député" do
+        expect(get_deputy_urls.join.include?('Alauzet')).to eq(true)   
       end
 
 

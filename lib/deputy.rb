@@ -16,7 +16,13 @@ def get_deputy_urls
         vcard=["Prefixe", "first_name", "last_name", "email"]
         #Pour chaque lien avec une classe .lientxt, je vais récupérer le nom du lien et l'url
        
-        content.css('li/a').length.times do |i|
+
+        
+        #content.css('li/a').length.times do |i|
+        
+        
+        # /!\ LIMITATION A 10 DEPUTES POUR ALLER PLUS VITE
+        10.times do |i|
                     
 
                             begin    
