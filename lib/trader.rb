@@ -2,7 +2,7 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 
-def crypto_scrapping
+def crypto_scrapper
 
 my_hash_each = {}
 my_array = []
@@ -33,4 +33,4 @@ return my_array
 
 end
 
-crypto_scrapping
+crypto_scrapper

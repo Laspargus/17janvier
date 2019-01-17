@@ -31,7 +31,7 @@ def get_townhall_urls
             
 
               #J'appelle ma fonction qui transforme prends un url absolu, scrolle la page et récupère le mail
-              email=get_townhall_email(link)
+              email=get_townhall_email(link).join
               
 
               #Je créais un hash contenant la paire  "Nom de la mairie" => "Mail de la mairie"
@@ -43,8 +43,8 @@ def get_townhall_urls
 
         end
      
-        #Je renvoie mon tableau
         puts my_array
+    #Je renvoie mon tableau
      return my_array
 
 
